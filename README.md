@@ -4,4 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 
-This a validator of javascript tracking pixels like the facebook pixels, but can use to validate any js script.
+This is a validator of javascript tracking pixels like the facebook pixels, but can use to validate any js script.
