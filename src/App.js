@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import validatePixelString from './validation/validation';
 import TextField from './components/TextField';
+import Footer from './components/Footer';
 
 function App() {
   const [error, setError] = React.useState(false);
@@ -16,15 +17,18 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <TextField
-        name="pixelValidator"
-        error={error}
-        message={message}
-        onChange={onChange}
-        value={value}
-      />
-    </div>
+    <>
+      <div className="App">
+        <TextField
+          name="pixelValidator"
+          error={error}
+          message={message}
+          onChange={onChange}
+          value={value}
+        />
+      </div>
+      <Footer />
+    </>
   );
 }
 
