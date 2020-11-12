@@ -6,6 +6,7 @@ const TextFieldStyles = styled.textarea`
   background-color: black;
   color: white;
   border: ${props => props.error ? "2px solid red" : "2px solid #61dafb"};
+  resize: none;
   &:focus {
     outline: none;
     box-shadow: 0 0 10px #719ECE;
