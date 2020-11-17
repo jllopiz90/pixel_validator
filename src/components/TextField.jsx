@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { isMobile } from '../utils/utils';
 
 const TextFieldStyles = styled.textarea`
   background-color: black;
@@ -20,13 +21,20 @@ const TextFieldStyles = styled.textarea`
   font-size: 15px;
   margin-top: 20px;
   width: 500px;
- `;
+  @media (max-width: 380px) {
+    width: 280px;
+    font-size: 11px;
+  }
+`;
 
 const SuccessMessage = styled.span`
   color: #04ec74;
   font-size: 15px;
   margin-top: 20px;
   width: 500px;
+  @media (max-width: 380px) {
+    width: 280px;
+  }
 `;
 
 function TextField(props) {
@@ -34,11 +42,14 @@ function TextField(props) {
     rows, cols, name, error, onChange, value, message,
   } = props;
   
+  const finalRows = isMobile() && rows > 15 ? 15 : rows;
+  const finalCols = isMobile() && cols > 30 ? 30 : cols;
+
   return (
     <>
     <TextFieldStyles
-      cols={cols}
-      rows={rows}
+      cols={finalCols}
+      rows={finalRows}
       name={name}
       id="validator"
       value={value}

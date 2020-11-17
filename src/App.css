@@ -5,9 +5,9 @@
 
 .App {
   background-color: #282c34;
-  min-height: 94vh;
   display: flex;
   flex-direction: column;
+  flex: 1 0 auto;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -19,13 +19,10 @@
 }
 
 footer {
-  height: 50px;
+  flex-shrink: 0;
   align-items: flex-start;
-  padding-top: 10px;
+  padding: 20px;
   background-color: rgba(8, 8, 8, 0.8);
-  @media (max-width: 450px) {
-    height: 50px;
-  }
 }
 
 footer a {
@@ -40,7 +37,7 @@ footer p {
   padding: 0;
   margin: 0;
   font-size: 15px;
-  color: var(--anyColor);
+  color: #d4eef8;
 }
 
 footer span {
